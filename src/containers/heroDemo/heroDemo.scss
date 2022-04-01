@@ -1,0 +1,48 @@
+.heroDemo-container{
+  height: 100vh;
+}
+
+.logo-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 7rem;
+
+  img{
+    width: 70%;
+  }
+}
+
+.scroll-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+
+  .scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 103px;
+    height: 103px;
+    width: 103px;
+    height: 103px;
+    border-radius: 50%/50%;
+    border: 2px solid var(--color-secondary);
+
+    p{
+      color: var(--color-secondary);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      /* identical to box height */
+  
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+  }
+
+
+  
+}

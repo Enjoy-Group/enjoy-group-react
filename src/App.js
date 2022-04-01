@@ -1,11 +1,11 @@
 import React from 'react'
 
-import HeroDemo from './HeroDemo'
+import HeroDemo from './containers/heroDemo/HeroDemo'
 
 const App = () => {
   return (
-    <div>
-      <HeroDemo />
+    <div className = 'app'>
+        <HeroDemo />
     </div>
   )
 }

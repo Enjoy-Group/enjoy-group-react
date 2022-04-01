@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeroDemo = () => {
+const Navbar = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const HeroDemo = () => {
   )
 }
 
-export default HeroDemo
+export default Navbar
