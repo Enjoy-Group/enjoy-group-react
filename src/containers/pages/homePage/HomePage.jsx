@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Hero, WhoSml } from '../../../containers'
+import { Hero, WhoSml, FeaturedProjects } from '../../../containers'
 
 const HomePage = () => {
   return (
@@ -10,6 +10,7 @@ const HomePage = () => {
         </header>
         <main>
             <WhoSml />
+            <FeaturedProjects />
         </main>
     </div>
   )
