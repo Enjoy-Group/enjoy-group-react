@@ -1,0 +1,27 @@
+.enjoy__footer{
+  padding: 2rem 4rem 1.5rem;
+}
+.enjoy__footer-navList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  p{
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+
+.enjoy__footer-copyright{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+  p{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.02em; 
+  }
+}

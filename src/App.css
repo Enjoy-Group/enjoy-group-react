@@ -15,3 +15,7 @@
   letter-spacing: 0.1em;
   text-transform: lowercase;
 }
+
+.bgLight{
+  background-color: var(--color-offBlack);
+}
