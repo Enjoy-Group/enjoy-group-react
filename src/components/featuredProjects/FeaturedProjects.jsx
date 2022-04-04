@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { FeaturedProject } from '../../../components'
+import { FeaturedProject } from '..'
 
 import './featuredProjects.scss'
-import testImage from '../../../assets/trees.jpeg'
+import testImage from '../../assets/trees.jpeg'
 
 const projects = [
   {

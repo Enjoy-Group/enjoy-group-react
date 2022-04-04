@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Hero, WhoSml, FeaturedProjects } from '../../../containers'
+import { Hero, WhoSml, FeaturedProjects } from '../../components'
 
 const HomePage = () => {
   return (

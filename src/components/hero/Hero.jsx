@@ -1,9 +1,9 @@
 import React from 'react'
 
 import './hero.scss'
-import logo from '../../../assets/EnjoyHeroLogoGrey.svg'
-import video from '../../../assets/showreel.mp4'
-import animatedLogo from '../../../assets/enjoyAnimated.mov'
+import logo from '../../assets/EnjoyHeroLogoGrey.svg'
+import video from '../../assets/showreel.mp4'
+import animatedLogo from '../../assets/enjoyAnimated.mov'
 
 const HeroDemo = () => {
 

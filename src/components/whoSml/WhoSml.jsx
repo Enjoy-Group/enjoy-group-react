@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonMain from '../../../components/buttonMain/ButtonMain'
+import ButtonMain from '../../components/buttonMain/ButtonMain'
 
 import './whoSml.scss'
 
