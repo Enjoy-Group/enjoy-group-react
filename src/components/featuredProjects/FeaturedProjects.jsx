@@ -25,7 +25,7 @@ const FeaturedProjects = ({projects}) => {
   return (
     <section className = 'enjoy__featuredProjects section__margin'>
         <div className = 'enjoy__featuredProjects-heading'>
-            <h3>featured projects</h3>
+            <h3 className = 'section__heading'>featured projects</h3>
         </div>
 
         <div className = 'enjoy__featuredProjects-content'>

@@ -5,3 +5,13 @@
 .section__padding{
   padding: 4rem 6rem;
 }
+
+.section__heading{
+  color: var(--color-secondary);
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 64px;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
