@@ -1,0 +1,120 @@
+.enjoy__contactSml{
+  width: 100%;
+
+}
+
+.enjoy__contactSml-container{
+  display: flex;
+  padding: 4rem 6rem;
+}
+
+.enjoy__contactSml-left_heading{
+
+  h2{
+    color: var(--color-white);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+}
+
+.enjoy__contactSml-left_content{
+  margin-top: 4rem;
+
+  p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  svg{
+    margin-right: 1rem;
+  }
+}
+
+.enjoy__contactSml-left_content-phoneAndEmail{
+  display: flex;
+
+  p:nth-child(1){
+    margin-right: 4rem;
+  }
+}
+
+.enjoy__contactSml-left_content-address{
+  margin-top: 2rem;
+}
+
+.enjoy__contactSml-right_form{
+  width: 100%;
+  margin-left: 3rem;
+
+  input{
+    height: 60px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 48px;
+    color: #fff;
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  textarea{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 48px;
+    color: #fff;
+    background-color: black;
+    border-radius: 10px;
+    height: 120px;
+  }
+}
+
+.enjoy__contactSml-right_form-name{
+  display: flex;
+
+  input:nth-child(1){
+    margin-right: 1rem;
+  }
+}
+
+.enjoy__contactSml-right_form-details{
+  display: flex;
+  margin-top: 1rem;
+
+  input:nth-child(1){
+    margin-right: 1rem;
+  }
+}
+
+.enjoy__contactSml-right_form-message{
+  margin-top: 1rem;
+}
+
+.enjoy__constactSml-right_form-submit{
+  text-align: right;
+  margin-top: 1rem;
+
+  input{
+    width: unset;
+    padding: 1rem 3rem;
+    line-height: unset;
+    background: var(--color-offBlack);
+    height: unset;
+    border-radius: 35px;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    cursor: pointer;
+  }
+}

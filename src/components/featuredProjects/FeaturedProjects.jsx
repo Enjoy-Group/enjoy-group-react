@@ -40,7 +40,7 @@ const FeaturedProjects = ({projects}) => {
             </div>
         </div>
 
-        <div className = 'enjoy__featuredProjects-btn'>
+        <div className = 'enjoy__featuredProjects-btn' role = 'button'>
             <p>view all work</p>
         </div>
     </section>

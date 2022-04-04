@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Hero, WhoSml, FeaturedProjects } from '../../components'
+import { Hero, WhoSml, FeaturedProjects, ContactSml } from '../../components'
 
 const HomePage = () => {
   return (
@@ -11,6 +11,7 @@ const HomePage = () => {
         <main>
             <WhoSml />
             <FeaturedProjects />
+            <ContactSml />
         </main>
     </div>
   )

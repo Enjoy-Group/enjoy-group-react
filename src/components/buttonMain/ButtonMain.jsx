@@ -5,7 +5,7 @@ import './buttonMain.scss'
 
 const ButtonMain = ({text}) => {
   return (
-    <div className = 'enjoy__buttonMain'>
+    <div className = 'enjoy__buttonMain' role = 'button'>
         <p>{text}</p>
     </div>
   )
