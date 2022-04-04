@@ -1,0 +1,19 @@
+.enjoy__buttonMain{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+
+  p{
+    margin: auto auto;
+    position: absolute;
+    margin-left: 50px;
+    background-color: var(--color-offBlack);
+    box-shadow: 0 0 0 10px rgba($color: #181818, $alpha: 1.0);
+    width: 200px;
+    color: var(--color-secondary);
+    
+  }
+}

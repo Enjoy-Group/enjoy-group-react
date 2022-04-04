@@ -21,3 +21,7 @@
 body{
   background-color: var(--color-primary);
 }
+
+p{
+  color: var(--color-white);
+}

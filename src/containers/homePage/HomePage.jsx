@@ -1,11 +1,16 @@
 import React from 'react'
 
-import { Hero } from '../../components'
+import { Hero, WhoSml } from '../../components'
 
 const HomePage = () => {
   return (
     <div className = 'enjoy__homePage'>
-        <Hero />
+        <header>
+            <Hero />
+        </header>
+        <main>
+            <WhoSml />
+        </main>
     </div>
   )
 }
