@@ -1,12 +1,18 @@
 import React from 'react'
+import { Route, Routes } from 'react-router'
 
-import HeroDemo from './containers/heroDemo/HeroDemo'
-import Hero from './containers/hero/Hero'
+import { HomePage } from './containers'
+import { Navbar } from './components'
 
 const App = () => {
   return (
     <div className = 'app'>
-        <Hero />
+        <Navbar />
+        <div className = 'routes'>
+            <Routes>
+                <Route path = '/' element = {<HomePage />}></Route>
+            </Routes>
+        </div>
     </div>
   )
 }
