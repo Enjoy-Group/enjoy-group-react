@@ -10,7 +10,6 @@ const FeaturedProject = ({name, image, left}) => {
     left 
     ?   <div className = 'enjoy__featuredProject' id = 'projectLeft'>
             <div className = 'enjoy__featuredProject-container' 
-                style = {{flexDirection: 'row-reverse', borderTopLeftRadius: '20rem', borderBottomLeftRadius: '20rem', borderBottomRightRadius: '0', borderTopRightRadius: '150px 600px'}}
             >
                 <div className = 'enjoy__featuredProject-container_angled' 
                     style = {{transform: 'skewX(17deg)', borderTopRightRadius: '20px', borderBottomRightRadius: '50px 40px', borderTopLeftRadius: '0', borderBottomLeftRadius: '0' }}>
@@ -26,16 +25,16 @@ const FeaturedProject = ({name, image, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
-                        <ButtonMain text = 'project info' marginRight/>
+                        <ButtonMain text = 'project info' />
                     </div>
                 </div>
                 
-                <div className = 'enjoy__featuredProject-container_image' style = {{marginRight: '0', marginLeft: '25px'}}>
+                <div className = 'enjoy__featuredProject-container_image'>
                     <img src = {image} alt=  {name}/>
                 </div>
             </div>
         </div>
-    :   <div className = 'enjoy__featuredProject' style = {{paddingleft: '3rem'}}>
+    :   <div className = 'enjoy__featuredProject'>
             <div className = 'enjoy__featuredProject-container'>
                 <div className = 'enjoy__featuredProject-container_angled'></div>
                 <div className = 'enjoy__featuredProject-container_content'>
@@ -48,7 +47,7 @@ const FeaturedProject = ({name, image, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
-                        <ButtonMain text = 'project info' marginLeft/>
+                        <ButtonMain text = 'project info'/>
                     </div>
                 </div>
                 
