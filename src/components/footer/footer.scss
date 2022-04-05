@@ -11,6 +11,12 @@
     font-size: 19px;
     line-height: 30px;
   }
+
+  @media screen and (max-width: 450px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 10px;
+  }
 }
 
 .enjoy__footer-copyright{

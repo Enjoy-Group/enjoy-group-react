@@ -19,9 +19,18 @@
     letter-spacing: 0.1em;
     text-transform: lowercase;
 
+    @media screen and (max-width: 450px) {
+      font-size: 76px;
+      line-height: 76px;
+    }
+
     span{
       color: var(--color-secondary);
     }
+  }
+
+  @media screen and (max-width: 450px) {
+    padding-top: 5rem;
   }
 }
 
@@ -37,6 +46,11 @@
     font-size: 18px;
     line-height: 26px;
     text-align: center;
+
+    @media screen and (max-width: 450px) {
+      font-size: 14px;
+      width: 70%;
+    }
   }
 }
 
@@ -53,5 +67,9 @@
     @media screen and (max-width: 450px) {
       margin-right: 4rem;
     }
+  }
+
+  @media screen and (max-width: 450px) {
+    padding-bottom: 5rem;
   }
 }

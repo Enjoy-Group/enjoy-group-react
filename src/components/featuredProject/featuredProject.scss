@@ -6,12 +6,12 @@
 
   @media screen and (max-width: 900px){
     height: 350px;
-    padding-right: 1rem;
+    padding-left: 3rem;
   }
 
   @media screen and (max-width: 450px){
     height: unset;
-    padding-right: 1rem;
+    padding-left: unset;
   }
 }
 
@@ -81,6 +81,11 @@
       font-size: 36px;
       width: unset;
     }
+
+    @media screen and (max-width: 450px) {
+      padding: 2rem 0;
+    }
+  
   }
 }
 
@@ -90,8 +95,17 @@
   width: 100%;
   padding-right: 100px;
 
+  @media screen and (max-width: 450px) {
+    padding-right: 30px;
+  }
+
   div{
     margin-left: auto;
+
+    @media screen and (max-width: 450px) {
+      margin-left: unset;
+      margin-right: auto;
+    }
   }
 }
 
@@ -123,6 +137,18 @@
 }
 
 #projectLeft{
+
+  @media screen and (max-width: 900px){
+    height: 350px;
+    padding-right: 3rem;
+    padding-left: unset;
+  }
+
+  @media screen and (max-width: 450px) {
+    height: unset;
+    padding-right: unset;
+  }
+  
   .enjoy__featuredProject-container{
     display: flex;
     width:100%;
@@ -135,10 +161,16 @@
     border-bottom-right-radius: 0;
     flex-direction: row-reverse;
 
-    .enjoy__featuredProject-container_content-btnLeft{
+    .enjoy__featuredProject-container_content-btn{
       
       div{
+        margin-left: unset;
         margin-right: auto;
+
+        @media screen and (max-width: 450px) {
+          margin-right: unset;
+          margin-left: auto;
+        }
       }
     }
 
@@ -157,5 +189,3 @@
     }
   }
 }
-
-// style = {{flexDirection: 'row-reverse', borderTopLeftRadius: '20rem', borderBottomLeftRadius: '20rem', borderBottomRightRadius: '0', borderTopRightRadius: '150px 600px'}}

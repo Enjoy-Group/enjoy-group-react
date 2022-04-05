@@ -1,4 +1,4 @@
-.heroDemo-container{
+.heroDemo-container1{
   height: 100vh;
   overflow: scroll;
 
@@ -14,7 +14,7 @@
   }
 }
 
-.logo-container{
+.logo-container1{
   display: flex;
   width: 100%;
   justify-content: center;
@@ -25,7 +25,7 @@
     z-index: 2;
   }
 
-  .logo-scroll-origin{
+  .logo-scroll-origin1{
     position: absolute;
     left: 60%;
     top: 20%;
@@ -38,14 +38,14 @@
   }
 }
 
-.scroll-container{
+.scroll-container1{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 6rem;
 
-  .scroll{
+  .scroll1{
     display: flex;
     justify-content: center;
     align-items: center;

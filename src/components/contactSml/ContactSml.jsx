@@ -15,12 +15,12 @@ const ContactSml = ({dark}) => {
 
                 <div className = 'enjoy__contactSml-left_content'>
                     <div className = 'enjoy__contactSml-left_content-phoneAndEmail'>
-                        <p><FiPhone color = '#39FF14' />  +012 345 6789</p>
-                        <p><AiOutlineMail color = '#39FF14' />  info@theenjoygroup.com</p>
+                        <p><FiPhone color = '#39FF14' />+012 345 6789</p>
+                        <p><AiOutlineMail color = '#39FF14' />info@theenjoygroup.com</p>
                     </div>
 
                     <div className = 'enjoy__contactSml-left_content-address'>
-                        <p><HiOutlineLocationMarker color = '#39FF14' size = {24} />  Adress Line 1, Address Line 2, City, Code</p>
+                        <p><HiOutlineLocationMarker color = '#39FF14' size = {24} />Adress Line 1, Address Line 2, City, Code</p>
                     </div>
                 </div>
             </div>
