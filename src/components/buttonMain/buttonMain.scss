@@ -17,5 +17,8 @@
     width: 100px;
     color: var(--color-secondary);
     
+    @media screen and (max-width: 450px){
+      width: unset;
+    }
   }
 }

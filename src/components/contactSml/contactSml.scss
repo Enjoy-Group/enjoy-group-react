@@ -1,6 +1,8 @@
 .enjoy__contactSml{
   width: 100%;
-
+  @media screen and (max-width: 450px){
+   display: none;
+  }
 }
 
 .enjoy__contactSml-container{

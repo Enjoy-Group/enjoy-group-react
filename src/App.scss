@@ -1,9 +1,25 @@
 .section__margin{
   margin: 4rem 6rem;
+
+  @media screen and (max-width: 900px) {
+    margin: 2rem 4rem;
+  }
+
+  @media screen and (max-width: 450px){
+    margin: unset;
+  }
 }
 
 .section__padding{
   padding: 4rem 6rem;
+
+  @media screen and (max-width: 900px) {
+    padding: 2rem 4rem;
+  }
+
+  @media screen and (max-width: 450px){
+    padding: unset;
+  }
 }
 
 .section__heading{

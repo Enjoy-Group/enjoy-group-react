@@ -23,7 +23,7 @@ const projects = [
 
 const FeaturedProjects = ({projects}) => {
   return (
-    <section className = 'enjoy__featuredProjects section__margin'>
+    <section className = 'enjoy__featuredProjects'>
         <div className = 'enjoy__featuredProjects-heading'>
             <h3 className = 'section__heading'>featured projects</h3>
         </div>
@@ -33,7 +33,7 @@ const FeaturedProjects = ({projects}) => {
                 <FeaturedProject name = 'project name' image = {testImage} />
             </div>
             <div className = 'enjoy__featuredProjects-content_project'>
-                <FeaturedProject name = 'project name' image = {testImage} />
+                <FeaturedProject name = 'project name' image = {testImage} left/>
             </div>
             <div className = 'enjoy__featuredProjects-content_project'>
                 <FeaturedProject name = 'project name' image = {testImage} />

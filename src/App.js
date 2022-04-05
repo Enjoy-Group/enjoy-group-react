@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router'
 import { HomePage } from './containers'
 import { Navbar } from './components'
 
-import './App.css'
+import './App.scss'
 
 const App = () => {
   return (
