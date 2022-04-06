@@ -12,6 +12,7 @@ const HeroDemo = () => {
   const origin = useParallax({
     scale: [-400, 200],
     translateY: [0, 900],
+    translateX: [100, -600]
     
   })
 
@@ -35,7 +36,8 @@ const HeroDemo = () => {
             <motion.img 
               src = {logo}
               animate = { inView ? {opacity: [1, 0], scale: [1, 5]} : {opacity: [0, 1], scale: [5, 1]}}
-              transition = {{duration: 0.5}}
+              transition = {{duration: 0.3}}
+              style = {{position: 'fixed'}}
               >
             </motion.img>
             <div 
@@ -47,14 +49,14 @@ const HeroDemo = () => {
 
             </div>
         </motion.div>
-        <div className = 'scroll-container1'>
-            <motion.div className = 'scroll1'  animate = {inView ? {opacity: [1, 0] } : {opacity: [0,1]}}
+        <div className = 'scroll-container1' style = {{position: 'fixed', top: '50%', zIndex: 10}}>
+            <motion.div className = 'scroll1'  animate = {inView ? {opacity: [1, 0], scale: [1, 2] } : {opacity: [0,1], scale: [2,1]}}
               transition = {{duration: 0.5}}>
                 <p>scroll</p>
             </motion.div>
         </div>
     </div>
-    <div ref = {ref} style = {{height: '1px', position: 'absolute', top: '101vh'}}>{ inView ? 'yes' : 'no'}</div>
+    <div ref = {ref} style = {{height: '1px', position: 'absolute', top: '110vh'}}>{ inView ? 'yes' : 'no'}</div>
     </>
   )
 }
