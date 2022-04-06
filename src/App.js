@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 import { HomePage } from './containers'
 import { Navbar } from './components'
