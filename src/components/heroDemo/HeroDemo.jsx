@@ -11,19 +11,19 @@ import { cos } from 'prelude-ls'
 const HeroDemo = () => {
   const origin = useParallax({
     scale: [-400, 200],
+    // opacity: [1.1,0.9, 0],
     translateY: [0, 900],
-    translateX: [100, -600]
+    translateX: [300, -900]
     
   })
 
   const { ref, inView } = useInView();
-
-  console.log(ref)
+  const { ref: refEnd, inView: inViewEnd, } = useInView();
 
   return (
     <>
     <div className = 'heroDemo-container1'>
-        <div className = 'video-container'  >
+        <div className = 'video-container'  style = {inViewEnd ? {position: 'absolute', top: '70vh'} : {position: 'fixed'}}>
           <video src = {video} autoPlay muted loop>
 
           </video>
@@ -37,7 +37,7 @@ const HeroDemo = () => {
               src = {logo}
               animate = { inView ? {opacity: [1, 0], scale: [1, 5]} : {opacity: [0, 1], scale: [5, 1]}}
               transition = {{duration: 0.3}}
-              style = {{position: 'fixed'}}
+              style = {!inViewEnd ? {position: 'fixed'} : {position: 'absolute'}}
               >
             </motion.img>
             <div 
@@ -56,7 +56,8 @@ const HeroDemo = () => {
             </motion.div>
         </div>
     </div>
-    <div ref = {ref} style = {{height: '1px', position: 'absolute', top: '110vh'}}>{ inView ? 'yes' : 'no'}</div>
+    <div ref = {ref} style = {{height: '1px', position: 'absolute', top: '115vh', color: 'white'}}></div>
+    <div ref = {refEnd} style = {{height: '1px', position: 'sticky', top: '170vh', color: 'white'}}>{ inViewEnd ? 'yes' : 'no'}</div>
     </>
   )
 }
