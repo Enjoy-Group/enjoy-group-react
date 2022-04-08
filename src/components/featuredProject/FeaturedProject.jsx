@@ -25,7 +25,7 @@ const FeaturedProject = ({name, image, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
-                        <ButtonMain text = 'project info' />
+                        <ButtonMain text = 'more info' />
                     </div>
                 </div>
                 
@@ -47,7 +47,7 @@ const FeaturedProject = ({name, image, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
-                        <ButtonMain text = 'project info'/>
+                        <ButtonMain text = 'more info'/>
                     </div>
                 </div>
                 

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { motion } from 'framer-motion'
 
 import { FeaturedProject } from '..'
 
@@ -40,9 +41,14 @@ const FeaturedProjects = ({projects}) => {
             </div>
         </div>
 
-        <div className = 'enjoy__featuredProjects-btn' role = 'button'>
+        <motion.div 
+          className = 'enjoy__featuredProjects-btn' 
+          role = 'button' 
+          whileHover = {{background: 'linear-gradient(153deg, #102a0b, transparent)'}}
+          transition = {{duration: 0.5, ease: 'easeIn'}}
+        >
             <p>view all work</p>
-        </div>
+        </motion.div>
     </section>
   )
 }

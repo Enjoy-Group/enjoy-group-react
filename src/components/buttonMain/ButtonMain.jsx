@@ -9,13 +9,29 @@ const ButtonMain = ({text, marginRight, marginLeft }) => {
   const [animateText, setAnimateText] = useState({})
 
   function onHoverStartAnimate(){
-    setAnimateText({marginLeft: 0, boxShadow: 'rgb(24 24 24) 0px 0px 0px 0px', scale: 0.9, width: 'auto' });
-    setAnimateDiv({scale: 1.2})
-  }
+    if(text === 'see our work') {
+        setAnimateText({marginLeft: '2px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 0px', scale: 0.8, width: 'auto' });
+        setAnimateDiv({scale: 1.3})
+
+    } else if(text === 'learn more') {
+        setAnimateText({marginLeft: '10px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 0px', scale: 0.8, width: 'auto' });
+        setAnimateDiv({scale: 1.3})
+
+    } else if(text === 'more info') {
+      setAnimateText({marginLeft: '15px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 0px', scale: 0.8, width: 'auto' });
+      setAnimateDiv({scale: 1.3})
+    }
+}
 
   function onHoverExitAnimate(){
     setAnimateText({marginLeft: '50px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 10px', scale: 1, width: '100px' })
     setAnimateDiv({scale: 1, justifyContent: 'unset'})
+
+    if(text === 'more info') {
+      setAnimateText({marginLeft: '60px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 10px', scale: 1, width: '100px' })
+      setAnimateDiv({scale: 1, justifyContent: 'unset'})
+
+  } 
   }
 
   return (
@@ -31,6 +47,7 @@ const ButtonMain = ({text, marginRight, marginLeft }) => {
           animate = {animateText}
           transition = {{duration: 0.3, ease: 'easeInOut'}}
           id = 'button-text'
+          style = {text === 'more info' ? {marginLeft: '60px'} : {marginLeft: '50px'}}
         >
           {text}</motion.p>
     </motion.div>
