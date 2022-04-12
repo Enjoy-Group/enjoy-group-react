@@ -8,7 +8,8 @@ const HomePage = () => {
   return (
     <div className = 'enjoy__homePage'>
         <header>
-            <HeroDemo isInView = {inView}/>
+            {/* <HeroDemo isInView = {inView}/> */}
+            <Hero />
         </header>
         <main ref = {ref}>
             <div ref = {ref}></div>

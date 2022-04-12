@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 
 import { FeaturedProject } from '..'
+import { client, urlFor } from '../../client'
 
 import './featuredProjects.scss'
 import testImage from '../../assets/trees.jpeg'
@@ -23,6 +24,14 @@ const projects = [
 ]
 
 const FeaturedProjects = ({projects}) => {
+  const [result, setRes] = useState([])
+  useEffect(()=> {
+    const query = '*[_type == "featuredProjects"]'
+    client.fetch(query)
+      .then((res) => setRes(res))
+  }, [])
+
+  console.log(result)
   return (
     <section className = 'enjoy__featuredProjects'>
         <div className = 'enjoy__featuredProjects-heading'>
