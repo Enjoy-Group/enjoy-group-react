@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { urlFor } from '../../client'
 
 import './featuredProject.scss'
 import ButtonMain from '../buttonMain/ButtonMain'
 
-const FeaturedProject = ({name, image, left}) => {
+const FeaturedProject = ({project, left}) => {
+    console.log(project)
 
   return (
+    // <></>
     left 
     ?   <div className = 'enjoy__featuredProject' id = 'projectLeft'>
             <div className = 'enjoy__featuredProject-container' 
@@ -21,7 +24,7 @@ const FeaturedProject = ({name, image, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-projectName'>
-                        <h3>{name}</h3>
+                        <h3>{project?.projectName}</h3>
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
@@ -30,7 +33,7 @@ const FeaturedProject = ({name, image, left}) => {
                 </div>
                 
                 <div className = 'enjoy__featuredProject-container_image'>
-                    <img src = {image} alt=  {name}/>
+                    <img src = {urlFor(project?.projectImage?.asset)} alt=  {project?.projectName}/>
                 </div>
             </div>
         </div>
@@ -43,7 +46,7 @@ const FeaturedProject = ({name, image, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-projectName'>
-                        <h3>{name}</h3>
+                        <h3>{project?.projectName}</h3>
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
@@ -52,16 +55,15 @@ const FeaturedProject = ({name, image, left}) => {
                 </div>
                 
                 <div className = 'enjoy__featuredProject-container_image'>
-                    <img src = {image} alt=  {name}/>
+                    <img src = {urlFor(project?.projectImage?.asset)} alt=  {project?.projectName}/>
                 </div>
             </div>
         </div>
   )
 }
 
-FeaturedProject.propTypes = {
-  name: PropTypes.string,
-  image: PropTypes.string
-}
+// FeaturedProject.propTypes = {
+//     project: PropTypes.object
+// }
 
 export default FeaturedProject

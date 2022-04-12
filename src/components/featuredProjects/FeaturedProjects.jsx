@@ -8,46 +8,36 @@ import { client, urlFor } from '../../client'
 import './featuredProjects.scss'
 import testImage from '../../assets/trees.jpeg'
 
-const projects = [
-  {
-    name: 'project name',
-    image: {testImage}
-  },
-  {
-    name: 'project name',
-    image: {testImage}
-  },
-  {
-    name: 'project name',
-    image: {testImage}
-  },
-]
-
-const FeaturedProjects = ({projects}) => {
-  const [result, setRes] = useState([])
+const FeaturedProjects = () => {
+  const [projects, setProjects] = useState([])
+  
   useEffect(()=> {
-    const query = '*[_type == "featuredProjects"]'
+    console.log('awe')
+    const query = '*[_type == "featuredProjects"]{featuredProjects[]->}'
+
     client.fetch(query)
-      .then((res) => setRes(res))
+      .then((res) => setProjects(res[0].featuredProjects))
   }, [])
 
-  console.log(result)
+  console.log(projects)
+
   return (
     <section className = 'enjoy__featuredProjects'>
         <div className = 'enjoy__featuredProjects-heading'>
             <h3 className = 'section__heading'>featured projects</h3>
         </div>
-
+    
         <div className = 'enjoy__featuredProjects-content'>
-            <div className = 'enjoy__featuredProjects-content_project'>
-                <FeaturedProject name = 'project name' image = {testImage} />
-            </div>
-            <div className = 'enjoy__featuredProjects-content_project'>
-                <FeaturedProject name = 'project name' image = {testImage} left/>
-            </div>
-            <div className = 'enjoy__featuredProjects-content_project'>
-                <FeaturedProject name = 'project name' image = {testImage} />
-            </div>
+            {projects?.map((project, index) => (
+              index%2 === 0 
+                ? (<div className = 'enjoy__featuredProjects-content_project' key = {index}>
+                      <FeaturedProject project = {project} />
+                  </div>)
+                : (
+                  <div className = 'enjoy__featuredProjects-content_project' key = {index}>
+                      <FeaturedProject project = {project} left/>
+                  </div>)
+            ))}
         </div>
 
         <motion.div 
@@ -60,10 +50,6 @@ const FeaturedProjects = ({projects}) => {
         </motion.div>
     </section>
   )
-}
-
-FeaturedProjects.propTypes = {
-
 }
 
 export default FeaturedProjects
