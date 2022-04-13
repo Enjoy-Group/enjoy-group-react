@@ -6,6 +6,10 @@
     
     align-items: center;
   }
+
+  @media screen and (max-width: 900px) {
+    // align-items: center;
+  }
 }
 
 .enjoy__trustedBy-heading{
@@ -20,7 +24,7 @@
   padding: 1rem;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
 
   @media screen and (max-width: 450px) {
     text-align: center;

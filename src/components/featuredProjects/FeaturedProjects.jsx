@@ -13,7 +13,7 @@ const FeaturedProjects = () => {
   const [projects, setProjects] = useState([])
   
   useEffect(()=> {
-    Aos.init({duration: 2000})
+    Aos.init({duration: 2000, disabled: true})
     
     const query = '*[_type == "featuredProjects"]{featuredProjects[]->}'
 

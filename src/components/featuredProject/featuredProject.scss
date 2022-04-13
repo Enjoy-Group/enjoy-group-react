@@ -1,17 +1,24 @@
 .enjoy__featuredProject{
   width: 100%;
   height: 450px;
-  // display: flex;
-  // margin: 0 auto;
-
+  // overflow: hidden;
+ 
   @media screen and (max-width: 900px){
     height: 350px;
+    width: 730px;
     padding-left: 3rem;
+    overflow: hidden;
   }
 
   @media screen and (max-width: 450px){
     height: unset;
+    width: 330px;
     padding-left: unset;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 1370px) {
+    width: 90vw;
   }
 }
 
@@ -66,7 +73,7 @@
 }
 
 .enjoy__featuredProject-container_content-projectName{
-
+  width: 100%;
   h3{
     font-weight: 600;
     font-size: 60px;
@@ -80,10 +87,12 @@
     @media screen and (max-width: 900px) {
       font-size: 36px;
       width: unset;
+      max-width: 250px;
     }
 
     @media screen and (max-width: 450px) {
       padding: 2rem 0;
+      min-width: 250px;
     }
   
   }
@@ -112,11 +121,13 @@
 .enjoy__featuredProject-container_image{
   height: 410px;
   width: 410px;
+  margin-left: auto;
   margin-right: 25px;
 
   @media screen and (max-width: 450px){
-    margin-top: 15px;
+    // margin-top: 15px;
     margin-right: unset;
+    margin: 15px auto;
   }
 
   img{
@@ -131,8 +142,8 @@
   }
 
   @media screen and (max-width: 450px){
-    height: 280px;
-    width: 280px;
+    height: 315px;
+    width: 315px;
   }
 }
 
@@ -146,7 +157,9 @@
 
   @media screen and (max-width: 450px) {
     height: unset;
+    text-align: right;
     padding-right: unset;
+    overflow: hidden;
   }
   
   .enjoy__featuredProject-container{
@@ -161,8 +174,22 @@
     border-bottom-right-radius: 0;
     flex-direction: row-reverse;
 
+    .enjoy__featuredProject-container_content{
+      @media screen and (max-width: 450px) {
+        margin-right: 1rem;
+      }
+      .enjoy__featuredProject-container_content-projectName{
+        // max-width: 250px;
+      }
+    }
+
     .enjoy__featuredProject-container_content-btn{
       
+      p{
+        width: unset;
+        // margin-left: 30px !important;
+      }
+
       div{
         margin-left: unset;
         margin-right: auto;
@@ -176,9 +203,13 @@
 
     .enjoy__featuredProject-container_image {
       margin-left: 25px;
+      margin-right: auto;
+
       @media screen and (max-width: 450px) {
-        
+        width: 310px;
+        width: 310px;
         margin-left: unset;
+        margin: 15px auto;
       }
     }
   
