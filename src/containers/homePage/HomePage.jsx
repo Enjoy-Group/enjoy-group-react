@@ -5,6 +5,7 @@ import { Hero, HeroDemo, WhoSml, FeaturedProjects, ContactSml, TrustedBy, Footer
 
 const HomePage = () => {
   const { ref, inView } = useInView();
+  
   return (
     <div className = 'enjoy__homePage'>
         <header>

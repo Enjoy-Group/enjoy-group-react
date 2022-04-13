@@ -16,7 +16,17 @@ const links = [
 ]
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false)
+  const [ toggle, setToggle ] = useState(false)
+  const [ animateClose, setAnimateClose ] = useState({})
+
+  function handleClose(){
+    setAnimateClose({width: '0%', opacity: [0.99, 0]})
+
+    setTimeout(() => {
+      setToggle(false)
+      setAnimateClose({})
+    }, 500)
+  }
 
   return (
     <nav className = 'enjoy__navbar'>
@@ -25,7 +35,8 @@ const Navbar = () => {
             {toggle && (
                 <motion.div 
                   className = 'enjoy__navbar-container_menu ' 
-                  whileInView = {{opacity: [0, 0.99]}} initial = {{opacity: 0}} 
+                  whileInView = {{opacity: [0, 0.99]}} initial = {{opacity: 0}}
+                  animate = {animateClose} 
                   transition = {{duration: 0.5, ease: 'easeIn'}}
                   >
                     <div className = 'enjoy__navbar-container_menu-links'>
@@ -37,7 +48,7 @@ const Navbar = () => {
                         <h2>get in touch</h2>
                         <ContactDetails />
                     </div>
-                    <div className = 'enjoy__navbar-container_menu-close' onClick = {() => setToggle(false)}>
+                    <div className = 'enjoy__navbar-container_menu-close' onClick = {() => handleClose()}>
                         <VscClose color = {'#39FF14'} size = {64} />
                     </div>
                 </motion.div>

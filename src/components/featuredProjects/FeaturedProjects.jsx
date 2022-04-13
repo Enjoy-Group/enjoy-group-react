@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import { FeaturedProject } from '..'
-import { client, urlFor } from '../../client'
+import { client } from '../../client'
 
 import './featuredProjects.scss'
-import testImage from '../../assets/trees.jpeg'
 
 const FeaturedProjects = () => {
   const [projects, setProjects] = useState([])
   
   useEffect(()=> {
-    console.log('awe')
+    Aos.init({duration: 2000})
+    
     const query = '*[_type == "featuredProjects"]{featuredProjects[]->}'
 
     client.fetch(query)
       .then((res) => setProjects(res[0].featuredProjects))
   }, [])
-
-  console.log(projects)
 
   return (
     <section className = 'enjoy__featuredProjects'>
@@ -30,13 +30,20 @@ const FeaturedProjects = () => {
         <div className = 'enjoy__featuredProjects-content'>
             {projects?.map((project, index) => (
               index%2 === 0 
-                ? (<div className = 'enjoy__featuredProjects-content_project' key = {index}>
-                      <FeaturedProject project = {project} />
-                  </div>)
+                ? (<div className = 'enjoy__featuredProjects-content_project' 
+                      key = {index}
+                      data-aos = 'fade-right'
+                      >
+                      
+                        <FeaturedProject project = {project} />
+                   </div>)
                 : (
-                  <div className = 'enjoy__featuredProjects-content_project' key = {index}>
+                   <div className = 'enjoy__featuredProjects-content_project' 
+                      key = {index}
+                      data-aos = 'fade-left'
+                      >
                       <FeaturedProject project = {project} left/>
-                  </div>)
+                   </div>)
             ))}
         </div>
 

@@ -21,7 +21,7 @@ const ButtonMain = ({text, marginRight, marginLeft }) => {
       setAnimateText({marginLeft: '15px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 0px', scale: 0.8, width: 'auto' });
       setAnimateDiv({scale: 1.3})
     }
-}
+  }  
 
   function onHoverExitAnimate(){
     setAnimateText({marginLeft: '50px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 10px', scale: 1, width: '100px' })
@@ -30,8 +30,7 @@ const ButtonMain = ({text, marginRight, marginLeft }) => {
     if(text === 'more info') {
       setAnimateText({marginLeft: '60px', boxShadow: 'rgb(24 24 24) 0px 0px 0px 10px', scale: 1, width: '100px' })
       setAnimateDiv({scale: 1, justifyContent: 'unset'})
-
-  } 
+    } 
   }
 
   return (
