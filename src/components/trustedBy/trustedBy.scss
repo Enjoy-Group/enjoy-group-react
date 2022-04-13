@@ -24,7 +24,7 @@
   padding: 1rem;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 50px;
+  grid-gap: 30px;
 
   @media screen and (max-width: 450px) {
     text-align: center;

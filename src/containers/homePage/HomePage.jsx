@@ -9,8 +9,8 @@ const HomePage = () => {
   return (
     <div className = 'enjoy__homePage'>
         <header>
-            {/* <HeroDemo isInView = {inView}/> */}
-            <Hero />
+            <HeroDemo isInView = {inView}/>
+            {/* <Hero /> */}
         </header>
         <main ref = {ref}>
             <div ref = {ref}></div>
