@@ -8,3 +8,4 @@ export { default as FeaturedProjects } from './featuredProjects/FeaturedProjects
 export { default as ContactSml } from './contactSml/ContactSml'
 export { default as TrustedBy } from './trustedBy/TrustedBy'
 export { default as Footer } from './footer/Footer'
+export { default as Works } from './works/Works'
