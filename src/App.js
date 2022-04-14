@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
 
-import { HomePage, OurWork } from './containers'
+import { HomePage, OurWork, Project } from './containers'
 import { Navbar } from './components'
 
 import './App.scss'
@@ -14,7 +14,8 @@ const App = () => {
             <Routes>
                 <Route path = '/' element = {<HomePage />}></Route>
                 <Route path = '/ourwork' element = {<OurWork />}></Route>
-                  <Route path = '/ourwork/:projectName' element = {<Project />}></Route>
+                    <Route path = '/ourwork/:projectName' element = {<Project />}></Route>
+                
             </Routes>
         </div>
     </div>

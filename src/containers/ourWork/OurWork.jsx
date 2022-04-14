@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 
-import { Works } from '../../components'
+import { ContactSml, Footer, Works } from '../../components'
 
 import { client, urlFor } from '../../client'
 
@@ -11,6 +11,8 @@ const OurWork = () => {
     <div className = 'enjoy__ourWork'>
         <main>
             <Works />
+            <ContactSml />
+            <Footer />
         </main>
     </div>
   )

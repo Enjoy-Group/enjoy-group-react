@@ -44,14 +44,20 @@ const Works = () => {
             <div className = 'enjoy__works-container_content'>
                 {projects?.map((project) => (
                     <motion.div className = 'enjoy__works-container_content-project' key = {project.id} whileHover = {{scale: [1, 1.02]}} transition = {{duration: 0.3}}>
-                      <Link to = {`/ourwork/${project.projectName}`}>
-                        <div className = 'enjoy__works-container_content-project_img' style = {{backgroundImage: `url(${urlFor(project.projectImage)})`}}>
-                            {/* <img src = {urlFor(project?.projectImage)} /> */}
-                        </div>
-                        <div className = 'enjoy__works-container_content-project_name'>
-                            <p>{project.projectName}</p>
-                        </div>
-                      </Link>
+                        <Link 
+                          to = {`/ourwork/${project.projectName}`} 
+                          state = {{
+                            image: project.projectImage,
+                            description: project.projectDescription
+                            }} 
+                          >
+                              <div className = 'enjoy__works-container_content-project_img' style = {{backgroundImage: `url(${urlFor(project.projectImage)})`}}>
+                                  {/* <img src = {urlFor(project?.projectImage)} /> */}
+                              </div>
+                              <div className = 'enjoy__works-container_content-project_name'>
+                                  <p>{project.projectName}</p>
+                              </div>
+                        </Link>
                     </motion.div>
 
                 ))}
