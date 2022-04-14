@@ -23,6 +23,7 @@
     "react-scripts": "5.0.0",
     "react-scroll-parallax": "^3.0.5",
     "sass": "^1.49.10",
+    "scroll-snap": "^4.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

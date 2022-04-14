@@ -22,6 +22,10 @@
   }
 }
 
+.app{
+  scroll-snap-align: start;
+}
+
 .section__heading{
   color: var(--color-secondary);
   font-family: 'Raleway';
