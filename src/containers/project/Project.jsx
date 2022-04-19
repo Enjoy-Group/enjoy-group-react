@@ -19,7 +19,7 @@ const Project = () => {
         </header>
         <main className = 'enjoy__project-container'>
             <p>{description}</p>
-            <img src = {urlFor(image)} />
+            <img src = {urlFor(image)} alt = {projectName} />
         </main>
     </article>
   )
