@@ -7,6 +7,9 @@ import { client, urlFor } from '../../client'
 import './ourWork.scss'
 
 const OurWork = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
   return (
     <div className = 'enjoy__ourWork'>
         <main>

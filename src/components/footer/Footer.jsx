@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import './footer.scss'
 
 const navList = [
@@ -16,7 +18,7 @@ const Footer = () => {
         <div className = 'enjoy__footer-navList'>
             {navList.map((item, index) => (
               <div className = 'enjoy__footer-navList_item' key = {index}>
-                  <p>{item}</p>
+                  <Link to = {`/${item.replaceAll(' ', '')}`}><p>{item}</p></Link>
               </div>
             ))}
         </div>

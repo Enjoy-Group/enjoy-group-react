@@ -1,7 +1,8 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { CgMenu, CgClose } from 'react-icons/cg'
 import { VscClose } from 'react-icons/vsc'
-import { animate, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 import ContactDetails from '../contactDetails/ContactDetails'
@@ -49,7 +50,9 @@ const Navbar = () => {
                       transition = {{duration: 0.5, ease: 'easeInOut'}}
                     >
                         {links.map((link, index) => (
-                          <a key = {index}><h1>{link}</h1></a>
+                          <Link to = {`/${link.replaceAll(' ', '')}`}key = {index} onClick = {() => handleClose()}>
+                              <h1>{link}</h1>
+                          </Link>
                         ))}
                     </motion.div>
 

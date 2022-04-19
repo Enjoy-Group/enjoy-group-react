@@ -1,6 +1,7 @@
 import React from 'react'
-import ButtonMain from '../../components/buttonMain/ButtonMain'
+import { Link } from 'react-router-dom'
 
+import ButtonMain from '../../components/buttonMain/ButtonMain'
 import './whoSml.scss'
 
 const WhoSml = () => {
@@ -15,8 +16,12 @@ const WhoSml = () => {
         </div>
         
         <div className = 'enjoy__whoSml-btns'>
-            <ButtonMain text = 'see our work'/>
-            <ButtonMain text = 'learn more'/>
+            <Link to = '/ourwork'>
+                <ButtonMain text = 'see our work'/>
+            </Link>
+            <Link to = '/whoweare'>
+                <ButtonMain text = 'learn more'/>
+            </Link>
         </div>
     </section>
   )

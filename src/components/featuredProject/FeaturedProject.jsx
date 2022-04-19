@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { urlFor } from '../../client'
+import { Link } from 'react-router-dom'
 
 import './featuredProject.scss'
 import ButtonMain from '../buttonMain/ButtonMain'
@@ -25,7 +26,15 @@ const FeaturedProject = ({project, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
-                        <ButtonMain text = 'more info' />
+                        <Link 
+                          to = {`/ourwork/${project.projectName}`} 
+                          state = {{
+                            image: project.projectImage,
+                            description: project.projectDescription
+                            }} 
+                          >
+                            <ButtonMain text = 'more info'/>
+                        </Link>
                     </div>
                 </div>
                 
@@ -50,7 +59,15 @@ const FeaturedProject = ({project, left}) => {
                     </div>
 
                     <div className = 'enjoy__featuredProject-container_content-btn'>
-                        <ButtonMain text = 'more info'/>
+                        <Link 
+                          to = {`/ourwork/${project.projectName}`} 
+                          state = {{
+                            image: project.projectImage,
+                            description: project.projectDescription
+                            }} 
+                          >
+                            <ButtonMain text = 'more info'/>
+                        </Link>
                     </div>
                 </div>
                 
