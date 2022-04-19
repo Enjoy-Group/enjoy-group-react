@@ -50,9 +50,22 @@ const Navbar = () => {
                       transition = {{duration: 0.5, ease: 'easeInOut'}}
                     >
                         {links.map((link, index) => (
-                          <Link to = {`/${link.replaceAll(' ', '')}`}key = {index} onClick = {() => handleClose()}>
-                              <h1>{link}</h1>
-                          </Link>
+                          link === 'home'
+                            ? <Link 
+                                to = '/' 
+                                key = {index} 
+                                onClick = {() => handleClose()}
+                              >
+                                  <h1>{link}</h1>
+                              </Link>
+
+                            : <Link 
+                                to = {`/${link.replaceAll(' ', '')}`}
+                                key = {index} 
+                                onClick = {() => handleClose()}
+                              >
+                                  <h1>{link}</h1>
+                              </Link>
                         ))}
                     </motion.div>
 

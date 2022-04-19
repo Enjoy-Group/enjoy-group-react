@@ -18,7 +18,10 @@ const Footer = () => {
         <div className = 'enjoy__footer-navList'>
             {navList.map((item, index) => (
               <div className = 'enjoy__footer-navList_item' key = {index}>
-                  <Link to = {`/${item.replaceAll(' ', '')}`}><p>{item}</p></Link>
+                  { item === 'home'
+                      ? <Link to = '/'><p>{item}</p></Link>
+                      : <Link to = {`/${item.replaceAll(' ', '')}`}><p>{item}</p></Link>
+                  }
               </div>
             ))}
         </div>

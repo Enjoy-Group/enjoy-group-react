@@ -16,18 +16,6 @@ const filters = [
 ]
 
 const Works = ({projects}) => {
-  // const [projects, setProjects] = useState([])
-
-  // useEffect(() => {
-  //   const query = `*[_type == "project"]`
-
-  //   client.fetch(query)
-  //     .then((res) => {
-  //       setProjects(res)
-  //       console.log(res)
-  //     })
-  // }, [])
-
   return (
     <section className = 'enjoy__works section__margin'>
         <header className = 'enjoy__works-heading'>

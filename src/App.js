@@ -25,7 +25,7 @@ const App = () => {
         <Navbar />
         <div className = 'routes'>
             <Routes>
-                <Route path = '/home' element = {<HomePage />}></Route>
+                <Route path = '/' element = {<HomePage />}></Route>
                 <Route path = '/ourwork' element = {<OurWork projects = {projects} />}></Route>
                     <Route path = '/ourwork/:projectName' element = {<Project />}></Route>
             </Routes>
