@@ -6,14 +6,14 @@ import { client, urlFor } from '../../client'
 
 import './ourWork.scss'
 
-const OurWork = () => {
+const OurWork = ({projects}) => {
   useEffect(() => {
     window.scrollTo(0,0)
   }, [])
   return (
     <div className = 'enjoy__ourWork'>
         <main>
-            <Works />
+            <Works projects = {projects} />
             <ContactSml />
             <Footer />
         </main>

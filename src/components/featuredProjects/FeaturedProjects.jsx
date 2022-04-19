@@ -35,15 +35,14 @@ const FeaturedProjects = () => {
                       key = {index}
                       data-aos = 'fade-right'
                       >
-                      
-                        <FeaturedProject project = {project} />
+                          <FeaturedProject project = {project} />
                    </div>)
                 : (
                    <div className = 'enjoy__featuredProjects-content_project' 
                       key = {index}
                       data-aos = 'fade-left'
                       >
-                      <FeaturedProject project = {project} left/>
+                          <FeaturedProject project = {project} left/>
                    </div>)
             ))}
         </div>
