@@ -15,8 +15,7 @@ const App = () => {
 
     client.fetch(query)
       .then((res) => {
-        setProjects(res)
-        console.log(res)
+          setProjects(res)
       })
   }, [])
 

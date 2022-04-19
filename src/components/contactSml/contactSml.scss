@@ -77,10 +77,20 @@
   @media screen and (max-width: 450px) {
     display: unset;
   }
+
+  p{
+    display: flex;
+    align-items: center;
+  }
 }
 
 .enjoy__contactSml-left_content-address{
   margin-top: 2rem;
+
+  p{
+    display: flex;
+    align-items: center;
+  }
 }
 
 .enjoy__contactSml-right_form{

@@ -1,10 +1,25 @@
+import react, { useEffect, useState } from 'react'
 import { FiPhone } from 'react-icons/fi'
 import { AiOutlineMail } from 'react-icons/ai'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 
+import { ContactDetails } from '..'
+
 import './contactSml.scss'
+import { client } from '../../client'
 
 const ContactSml = ({dark}) => {
+  const [contact, setContact] = useState([])
+
+  useEffect(() => {
+    const query = '*[_type == "contactDetails"]'
+
+    client.fetch(query)
+    .then((res) => {
+        setContact(res[0])
+    })
+  }, [])
+
   return (
     <section className = 'enjoy__contactSml' style = { dark ? {background: '#000'} : {background: 'var(--color-offBlack)'}}>
         <div className = 'enjoy__contactSml-container'>
@@ -15,13 +30,14 @@ const ContactSml = ({dark}) => {
 
                 <div className = 'enjoy__contactSml-left_content'>
                     <div className = 'enjoy__contactSml-left_content-phoneAndEmail'>
-                        <p><FiPhone color = '#39FF14' />+012 345 6789</p>
-                        <p><AiOutlineMail color = '#39FF14' />info@theenjoygroup.com</p>
+                        <p><FiPhone color = '#39FF14' size = {24} />{contact.contactNumber}</p>
+                        <p><AiOutlineMail color = '#39FF14' size = {24} />{contact.email}</p>
                     </div>
 
                     <div className = 'enjoy__contactSml-left_content-address'>
-                        <p><HiOutlineLocationMarker color = '#39FF14' size = {24} />Adress Line 1, Address Line 2, City, Code</p>
+                        <p><HiOutlineLocationMarker color = '#39FF14' size = {24} />{contact.address}</p>
                     </div>
+                    {/* <ContactDetails /> */}
                 </div>
             </div>
 
